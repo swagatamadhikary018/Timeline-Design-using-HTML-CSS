@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&idisplay=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body {
+    background-color: #1f242d;
+    color: #ededed;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 9%;
+}
+
+.timeline .timeline-row {
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+}
+
+.timeline-row .timeline-column {
+    flex: 1 1 320px;
+}
+
+.timeline-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin: 32px 0 16px 30px;
+}
+
+.timeline-column .timeline-box {
+    position: relative;
+    border-left: 2px solid #0ef;
+
+}
+
+.timeline-box .timeline-content {
+    position: relative;
+    padding-left: 27px;
+
+}
+
+.timeline-box .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10.5px;
+    width: 20px;
+    height: 20px;
+    background: #0ef;
+    border-radius: 50%;
+}
+
+.timeline-content .content {
+    padding: 24px;
+    border: 2px solid #0ef;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.timeline-content .content .year {
+    font-size: 16px;
+    color: #0ef;
+
+}
+
+.timeline-content .content .year i {
+    margin-right: 8px;
+
+}
+
+.timeline-content .content h3 {
+    font-size: 19px;
+    margin: 8px 0;
+
+}
+
+.timeline-content .content p {
+    font-size: 16px;
+}
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 100%;
+    background: #1f242d;
+    animation: show-right 1s ease forwards;
+    animation-delay: calc(.5s *var(--i));
+}
+
+@keyframes show-right {
+    100%{
+        width: 0;
+    }
+
+}
